@@ -12,7 +12,7 @@
 
 ```bash
 docker run -it --rm --cap-add=NET_ADMIN \
--p 1194:1194/udp -p 80:8080/tcp \
+-p 1194:1194/tcp -p 80:8080/tcp \
 --name dockovpn alekslitvinenk/openvpn
 ```
 
@@ -79,7 +79,7 @@ docker run -it --rm --cap-add=NET_ADMIN \
 DOCKOVPN_CONFIG_PORT=<custom port>
 DOCKOVPN_TUNNEL_PORT=<custom port>
 docker run -it --rm --cap-add=NET_ADMIN \
--p $DOCKOVPN_TUNNEL_PORT:1194/udp -p $DOCKOVPN_CONFIG_PORT:8080/tcp \
+-p $DOCKOVPN_TUNNEL_PORT:1194/tcp -p $DOCKOVPN_CONFIG_PORT:8080/tcp \
 -e HOST_CONF_PORT="$DOCKOVPN_CONFIG_PORT" \
 -e HOST_TUN_PORT="$DOCKOVPN_TUNNEL_PORT" \
 --name dockovpn alekslitvinenk/openvpnHOST_TUN_PORT
@@ -114,7 +114,7 @@ docker run -it --rm --cap-add=NET_ADMIN \
 
 ```bash
 docker run -it --rm --cap-add=NET_ADMIN \
--p 1194:1194/udp -p 80:8080/tcp \
+-p 1194:1194/tcp -p 80:8080/tcp \
 --name dockovpn alekslitvinenk/openvpn
 ```
 
